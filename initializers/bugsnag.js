@@ -1,7 +1,7 @@
 exports.bugsnag = function(api, next){  
 
   api.bugsnag = {
-    client: require("bugsnag");
+    client: require("bugsnag"),
   }
 
   api.bugsnag.client.register(api.config.bugsnag.apiKey, api.config.bugsnag.options);
