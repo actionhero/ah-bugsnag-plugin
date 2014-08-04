@@ -7,20 +7,22 @@ exports.bugsnag = function(api, next){
   api.bugsnag.client.register(api.config.bugsnag.apiKey, api.config.bugsnag.options);
 
   api.bugsnag.notifier = function(err, type, name, objects, severity){
-    var relevantObjects = objects;
+    var relevantObjects = {};
     if(type == 'action'){
-      var relevantDetails = ['action', 'remoteIP', 'type', 'params', 'room'];
+      var relevantDetails = ['id', 'action', 'remoteIP', 'type', 'params', 'room'];
       relevantObjects.connection = {};
       relevantDetails.forEach(function(key){
         relevantObjects.connection[key] = objects.connection[key];
       });
+    }else{
+      relevantObjects = objects;
     }
 
     api.bugsnag.client.notify(err, {
       errorName: name,
       groupingHash: name,
       type: type, 
-      objects: objects
+      objects: relevantObjects
     });
   }
 
