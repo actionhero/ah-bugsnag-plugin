@@ -6,11 +6,12 @@ exports.bugsnag = function(api, next){
 
   api.bugsnag.client.register(api.config.bugsnag.apiKey, api.config.bugsnag.options);
 
-  api.bugsnag.notifier = function(type, err, extraMessages, severity){
+  api.bugsnag.notifier = function(err, type, name, objects, severity){
     api.bugsnag.client.notify(err, {
-      groupingHash: extraMessages[0],
+      errorName: name,
+      groupingHash: name,
       type: type, 
-      extraMessages: extraMessages
+      objects: objects
     });
   }
 
