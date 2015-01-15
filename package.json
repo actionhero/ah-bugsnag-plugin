@@ -2,13 +2,13 @@
   "author": "Evan Tahler <evantahler@gmail.com>",
   "name": "ah-bugsnag-plugin",
   "description": "I use bugsnag as an error reporter",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "homepage": "http://actionherojs.com",
   "repository": {
     "type": "git",
     "url": "git://github.com/evantahler/ah-bugsnag-plugin.git"
   },
-  "keywords": [],
+  "keywords": ["actionherojs", "actionhero", "bug", "bugs", "bugsnag", "error", "api", "server", "exception"],
   "engines": {
     "node": ">=0.8.0"
   },

@@ -25,6 +25,8 @@ module.exports = {
         objects: relevantObjects
       });
     };
+
+    next();
   },
 
   start: function(api, next){
