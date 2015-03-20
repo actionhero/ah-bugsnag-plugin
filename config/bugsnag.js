@@ -4,6 +4,7 @@ exports.default = {
       apiKey: 'XXX',
       options: {
         useSSL: true,
+        releaseStage: api.env,
         notifyReleaseStages: ['production', 'staging'],
       },
     }
