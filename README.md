@@ -1,5 +1,7 @@
 ## Installation
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/actionhero/ah-bugsnag-plugin.svg)](https://greenkeeper.io/)
+
 1) Install bugsnag and the plugin:
 ```
 npm install bugsnag --save
